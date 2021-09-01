@@ -25,4 +25,8 @@ public class OrderService {
         }
         return orderValue;
     }
+
+    public int getOrderValue(Restaurant restaurant, List<String> itemNames){
+        return 0;
+    }
 }
