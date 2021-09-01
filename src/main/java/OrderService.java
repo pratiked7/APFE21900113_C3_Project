@@ -1,22 +1,28 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderService {
 
+    private static List<Item> selectedItems = new ArrayList<>();
+
+
     public List<Item> getSelectedItems(){
-        //TODO
-        return null;
+        return selectedItems;
     }
 
     public void selectItem(Item item){
-        //TODO
+        selectedItems.add(item);
     }
 
     public void unselectItem(Item item){
-        //TODO
+        selectedItems.remove(item);
     }
 
     public int getOrderValue(){
-        //TODO
-        return 0;
+        int orderValue = 0;
+        for (Item item : selectedItems){
+            orderValue += item.getPrice();
+        }
+        return orderValue;
     }
 }

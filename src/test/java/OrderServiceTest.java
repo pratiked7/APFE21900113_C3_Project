@@ -20,6 +20,7 @@ public class OrderServiceTest {
         restaurant.addToMenu("Vegetable lasagne", 269);
         restaurant.addToMenu("Sizzling brownie", 319);
 
+        orderService.getSelectedItems().clear();
         orderService.selectItem(new Item("Sweet corn soup",119));
     }
 
